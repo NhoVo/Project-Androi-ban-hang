@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FBFF"
+    tools:context=".gui.Home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="87dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/loaiBanh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Các loại bánh"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Button
+        android:id="@+id/btnGato"
+        android:layout_width="81.75dp"
+        android:layout_height="109dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/category_boder"
+        android:onClick="gatoClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loaiBanh"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="64.96dp"
+        android:layout_height="86.98dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="gatoClick"
+        android:background="@drawable/category_back"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGato"
+        app:layout_constraintEnd_toEndOf="@+id/btnGato"
+        app:layout_constraintStart_toStartOf="@+id/btnGato"
+        app:layout_constraintTop_toTopOf="@+id/btnGato" />
+
+    <ImageView
+        android:id="@+id/category_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gato_1"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="@+id/btnBack"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="@+id/btnBack"
+        app:layout_constraintVertical_bias="0.163" />
+
+    <TextView
+        android:id="@+id/categoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Gato"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="@+id/btnBack"
+        app:layout_constraintStart_toStartOf="@+id/btnBack"
+        app:layout_constraintTop_toBottomOf="@+id/category_pic" />
+
+    <Button
+        android:id="@+id/btnMouse"
+        android:layout_width="81.75dp"
+        android:layout_height="109dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/category_boder"
+        android:onClick="mouseClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/btnBackTiramisu"
+        app:layout_constraintTop_toBottomOf="@+id/loaiBanh"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <Button
+        android:id="@+id/btnBackMouse"
+        android:layout_width="64.96dp"
+        android:layout_height="86.98dp"
+        android:layout_alignParentLeft="true"
+        android:onClick="mouseClick"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/category_back"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMouse"
+        app:layout_constraintEnd_toEndOf="@+id/btnMouse"
+        app:layout_constraintStart_toStartOf="@+id/btnMouse"
+        app:layout_constraintTop_toTopOf="@+id/btnMouse" />
+
+    <ImageView
+        android:id="@+id/picMouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mouse_1"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackMouse"
+        app:layout_constraintEnd_toEndOf="@+id/btnBackMouse"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/btnBackMouse"
+        app:layout_constraintTop_toTopOf="@+id/btnBackMouse"
+        app:layout_constraintVertical_bias="0.163" />
+
+    <TextView
+        android:id="@+id/txtNameMouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Mouse"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackMouse"
+        app:layout_constraintEnd_toEndOf="@+id/btnBackMouse"
+        app:layout_constraintStart_toStartOf="@+id/btnBackMouse"
+        app:layout_constraintTop_toBottomOf="@+id/picMouse" />
+
+    <Button
+        android:id="@+id/btnTiramisu"
+        android:layout_width="81.75dp"
+        android:layout_height="109dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/category_boder"
+        android:onClick="tiramisuClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnGato"
+        app:layout_constraintTop_toBottomOf="@+id/loaiBanh"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <Button
+        android:id="@+id/btnBackTiramisu"
+        android:layout_width="64.96dp"
+        android:layout_height="86.98dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="tiramisuClick"
+        android:background="@drawable/category_back"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTiramisu"
+        app:layout_constraintEnd_toEndOf="@+id/btnTiramisu"
+        app:layout_constraintStart_toStartOf="@+id/btnTiramisu"
+        app:layout_constraintTop_toTopOf="@+id/btnTiramisu" />
+
+    <ImageView
+        android:id="@+id/picTiramisu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tiramisu_1"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackTiramisu"
+        app:layout_constraintEnd_toEndOf="@+id/btnBackTiramisu"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/btnBackTiramisu"
+        app:layout_constraintTop_toTopOf="@+id/btnBackTiramisu"
+        app:layout_constraintVertical_bias="0.163" />
+
+    <TextView
+        android:id="@+id/txtNameTiramisu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Tiramisu"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackTiramisu"
+        app:layout_constraintEnd_toEndOf="@+id/btnBackTiramisu"
+        app:layout_constraintStart_toStartOf="@+id/btnBackTiramisu"
+        app:layout_constraintTop_toBottomOf="@+id/picTiramisu" />
+
+    <Button
+        android:id="@+id/btnChese"
+        android:layout_width="81.75dp"
+        android:layout_height="109dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/category_boder"
+        android:onClick="cheseClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toEndOf="@+id/btnMouse"
+        app:layout_constraintTop_toBottomOf="@+id/loaiBanh"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <Button
+        android:id="@+id/btnBackChese"
+        android:layout_width="64.96dp"
+        android:layout_height="86.98dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="cheseClick"
+        android:background="@drawable/category_back"
+        app:layout_constraintBottom_toBottomOf="@+id/btnChese"
+        app:layout_constraintEnd_toEndOf="@+id/btnChese"
+        app:layout_constraintStart_toStartOf="@+id/btnChese"
+        app:layout_constraintTop_toTopOf="@+id/btnChese" />
+
+    <ImageView
+        android:id="@+id/picChese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chese"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackChese"
+        app:layout_constraintEnd_toEndOf="@+id/btnBackChese"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/btnBackChese"
+        app:layout_constraintTop_toTopOf="@+id/btnBackChese"
+        app:layout_constraintVertical_bias="0.163" />
+
+    <TextView
+        android:id="@+id/txtNameChese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Chese"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackChese"
+        app:layout_constraintEnd_toEndOf="@+id/btnBackChese"
+        app:layout_constraintStart_toStartOf="@+id/btnBackChese"
+        app:layout_constraintTop_toBottomOf="@+id/picChese" />
+    <TextView
+        android:id="@+id/DanhSach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dm_sans"
+        android:text="Danh sách bánh"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGato"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <GridView
+        android:id="@+id/gridList"
+        android:layout_width="match_parent"
+        android:layout_height="302dp"
+        android:numColumns="2"
+        android:verticalSpacing="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DanhSach"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
